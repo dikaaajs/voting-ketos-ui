@@ -1,0 +1,23 @@
+/* App.css */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+
+.fade-in {
+  /* Menggunakan animasi fadeIn dari animate.css */
+  animation: fadeIn 1s;
+}
+
+/* Animasi fadeIn sendiri (jika tidak ingin menggunakan animate.css) */
+
+.fade-in {
+  animation: fadeInAnimation 1s;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
