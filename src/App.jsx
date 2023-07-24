@@ -4,6 +4,14 @@ import glassTriangle from "./assets/Atom_Tetra_1_0002.png";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
 
+// component
+import CandidateCard from "./components/CandidateCard";
+import FooterHomepage from "./components/Footer";
+
+// data
+import { candidate } from "./data/candidateData";
+import NavBar from "./components/NavBar";
+
 function App() {
   const [fadeIn, setFadeIn] = useState(false);
 
@@ -21,9 +29,28 @@ function App() {
     threshold: 0.1,
     delay: 300,
   });
+  const { ref: hPanduan, inView: viewHPanduan } = useInView({
+    threshold: 0.1,
+    delay: 200,
+  });
+  const { ref: panduan1, inView: viewPanduan1 } = useInView({
+    threshold: 0.1,
+    delay: 700,
+  });
+  const { ref: panduan2, inView: viewPanduan2 } = useInView({
+    threshold: 0.1,
+    delay: 600,
+  });
+  const { ref: panduan3, inView: viewPanduan3 } = useInView({
+    threshold: 0.1,
+    delay: 500,
+  });
 
   return (
     <div className="parent-elemeent w-full h-fit relative flex flex-col gap-[150px]">
+      {/* navbar */}
+      <NavBar />
+
       {/* jumbotron section */}
       <div
         // onChange={(inView, entry) => handleAnimation(inView)}
@@ -68,15 +95,17 @@ function App() {
 
       {/* panduan section */}
       <div className="py-[40px] bg-black">
-        <h1 className="font-poppins text-[2rem] text-center md:leading-[60px] leading-[40px] !text-white">
+        <div ref={hPanduan} className={`w-fit block mx-auto duration-[2s] ease-out ${viewHPanduan ? "opacity-100" : "opacity-0"}`} >
+        <h1 className={`font-poppins text-[2rem] text-center md:leading-[60px] leading-[40px] !text-white`}>
           Panduan
         </h1>
+        </div>
         <p className="text-center text-white text-[.9rem]">
           berikut adalah cara menggunakan aplikasi ini dengan baik dan benar
         </p>
 
         <div className="flex gap-[50px] justify-center my-[80px] w-[80%] mx-auto">
-          <div className="container-panduan">
+          <div ref={panduan1} className={`container-panduan duration-[1s] ease-out ${viewPanduan1 ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
             <div className="w-1/4 flex justify-center items-center !bg-slate-100 rounded-l-[5px]">
               <span className="material-symbols-outlined">shield_person</span>
             </div>
@@ -84,7 +113,7 @@ function App() {
               <p>login super admin terlebih dahulu</p>
             </div>
           </div>
-          <div className="container-panduan">
+          <div ref={panduan2} className={`container-panduan duration-[1s] ease-out ${viewPanduan2 ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
             <div className="w-1/4 flex justify-center items-center !bg-slate-100 rounded-l-[5px]">
               <span className="material-symbols-outlined">person</span>
             </div>
@@ -92,7 +121,7 @@ function App() {
               <p>setiap siswa/i memasukan NIS pada halaman login siswa</p>
             </div>
           </div>
-          <div className="container-panduan">
+          <div ref={panduan3} className={`container-panduan duration-[1s] ease-out ${viewPanduan3 ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"}`}>
             <div className="w-1/4 flex justify-center items-center !bg-slate-100 rounded-l-[5px]">
               <span className="material-symbols-outlined">done</span>
             </div>
@@ -114,16 +143,19 @@ function App() {
           </p>
         </div>
 
-        <div>
-          <div>
-            <img src="" alt="" />
-          </div>
-          <div className="flex flex-col">
-            <div></div>
-            <div></div>
-          </div>
+        <div className="flex flex-wrap justify-center gap-[40px] w-[85%] mx-auto py-[90px]">
+          {/* kandidat 1 */}
+          {
+            candidate.map((e, index) => {
+              return <CandidateCard key={index} data={e}/>
+            })
+          }
+          
         </div>
       </div>
+
+      {/* footer */}
+      <FooterHomepage />
     </div>
   );
 }

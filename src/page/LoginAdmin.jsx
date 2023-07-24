@@ -1,18 +1,20 @@
 import React from "react";
 import Background from "../assets/background-login.png";
+import NavBar from "../components/NavBar";
 
 const LoginAdmin = () => {
   const myStyle = {
-    backgroundImage: `url(${Background})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
   };
   return (
     <div
-      className="relative min-h-screen max-h-screen pt-[50px]"
+      className="min-h-screen max-h-screen"
       style={myStyle}
     >
-      <div className="card-login">
+      <NavBar />
+
+      <div className="card-login mt-[100px] shadow-2xl !bg-slate-800 !text-white">
         <h1>Login admin</h1>
         <form className="w-[80%] mx-auto py-[30px] block mt-[30px]">
           <label>id :</label>

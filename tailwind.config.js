@@ -6,6 +6,7 @@ export default {
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
       lato: ["Lato", "sans-serif"],
+      roboto: ["Roboto", "sans-serif"],
     },
   },
   plugins: [],

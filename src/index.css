@@ -15,7 +15,7 @@
 }
 
 .login-input {
-    @apply border-slate-700 opacity-60 border-[2px] border-solid w-full rounded-[5px]
+    @apply bg-white opacity-60 border-[2px] border-solid w-full rounded-[5px]
 }
 
 .button-login {
@@ -28,4 +28,8 @@
 
 .container-panduan {
     @apply bg-white flex h-[100px] rounded-[5px] w-[30%]
+}
+
+.active-nav-kandidat {
+    @apply text-blue-500
 }

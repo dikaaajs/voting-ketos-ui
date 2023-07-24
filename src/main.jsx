@@ -11,7 +11,6 @@ import router from "./routes/Routes";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
     <div className="w-full overflow-hidden">
-      <NavBar />
       <RouterProvider router={router} />
     </div>
   </Provider>
