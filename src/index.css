@@ -15,7 +15,7 @@
 }
 
 .login-input {
-    @apply bg-white opacity-60 border-[2px] border-solid w-full rounded-[5px]
+    @apply bg-white opacity-60 border-[2px] border-solid w-full rounded-[5px] text-black font-lato px-[15px]
 }
 
 .button-login {

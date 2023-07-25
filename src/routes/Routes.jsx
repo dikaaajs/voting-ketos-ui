@@ -5,6 +5,7 @@ import LoginAdmin from "../page/LoginAdmin.jsx";
 import ProtectApp from "./ProtectApp.jsx";
 import App from "../App.jsx";
 import { createBrowserRouter } from "react-router-dom";
+import LobiMurid from "../page/LobiMurid.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     path: "/login",
     element: <LoginAdmin />,
   },
+  // route setelah login admin
   {
     path: "/app",
     element: <ProtectApp />,
@@ -22,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "murid",
         element: <LoginMurid />,
+      },
+      {
+        path: "lobi",
+        element: <LobiMurid />,
       },
     ],
   },
