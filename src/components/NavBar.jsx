@@ -23,7 +23,7 @@ const NavBar = (props) => {
           </h1>
         </div>
         <div onClick={handleLoginButton} className="cursor-pointer">
-          <h1 className="button-login !bg-white !text-black border-solid border-black border-[1px] font-poppins !text-[1rem]">
+          <h1 className="button-login !bg-[#ECAA55] font-send !text-[1rem] border-[#362313] border-[1px] border-solid">
             {display}
           </h1>
         </div>

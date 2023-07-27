@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+p {
+    @apply font-courier
+}
+
 .card-login {
     @apply bg-white w-[85%] lg:w-[40%] mx-auto rounded-[9px] py-[20px] font-poppins text-slate-800
 }
@@ -19,7 +23,7 @@
 }
 
 .button-login {
-    @apply px-[10px] py-[6px] rounded-[5px] text-[.8rem] mx-auto block
+    @apply px-[15px] py-[6px] rounded-[5px] text-[.8rem] mx-auto block text-black
 }
 
 .p-panduan {

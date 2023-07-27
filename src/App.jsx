@@ -6,12 +6,14 @@ import { useState } from "react";
 
 // svg
 import manusia1 from "./assets/manusia1.svg";
-import manusia2 from "./assets/manusia2.svg";
+import manusia2 from "./assets/s 1.svg";
 import wave from "./assets/wave.svg";
 import muridMemilih from "./assets/murid-memilih.svg";
 import loginAdmin from "./assets/login-admin.svg";
 import loginMurid from "./assets/login-murid.svg";
-import manusiaPanduan from "./assets/manusiaPanduan.svg";
+import manusiaPanduan from "./assets/manusiaPanduan.png";
+import lambangKerajaan from "./assets/lambangKerajaan.svg";
+import bintang from "./assets/bintang.svg";
 
 // component
 import CandidateCard from "./components/CandidateCard";
@@ -76,7 +78,7 @@ function App() {
           ref={x}
           src={manusia2}
           alt=""
-          className={`w-[140px] absolute bottom-[10px] right-[90px] z-[10] duration-[1s] ease-out ${
+          className={`w-[230px] absolute bottom-[10px] right-[90px] z-[10] duration-[1s] ease-out ${
             viewX ? " opacity-100" : " opacity-0"
           }`}
         />
@@ -84,6 +86,20 @@ function App() {
           src={wave}
           alt=""
           className={`w-full absolute bottom-[-10px] duration-[1s] ease-out z-[8] ${
+            viewX ? " opacity-100" : " opacity-0"
+          }`}
+        />
+        <img
+          src={lambangKerajaan}
+          alt=""
+          className={`absolute left-[46%] bottom-[50px] duration-[1s] ease-out z-[10] ${
+            viewX ? " opacity-100" : " opacity-0"
+          }`}
+        />
+        <img
+          src={bintang}
+          alt=""
+          className={`absolute left-[250px] top-[150px] duration-[1s] ease-out z-[10] ${
             viewX ? " opacity-100" : " opacity-0"
           }`}
         />
@@ -99,7 +115,7 @@ function App() {
           </h1>
           <p
             ref={paraJumbotron}
-            className={`text-center duration-[2s] ease-out pt-[30px] pb-[80px] ${
+            className={`text-center duration-[2s] ease-out pt-[30px] pb-[200px] ${
               viewParaJumbotron ? "opacity-100 translate-x-0" : "opacity-0"
             }`}
           >
@@ -116,7 +132,7 @@ function App() {
         <img
           src={manusiaPanduan}
           alt=""
-          className="absolute scale-55 right-[-55px] bottom-[-30px]"
+          className="absolute h-[400px] right-[-70px] bottom-[-30px]"
         />
 
         <div

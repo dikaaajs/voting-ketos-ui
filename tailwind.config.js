@@ -8,6 +8,7 @@ export default {
       lato: ["Lato", "sans-serif"],
       roboto: ["Roboto", "sans-serif"],
       send: ["Send Flowers", "cursive"],
+      courier: ["Courier Prime", "monospace"],
     },
   },
   plugins: [],
