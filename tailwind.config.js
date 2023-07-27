@@ -7,6 +7,7 @@ export default {
       poppins: ["Poppins", "sans-serif"],
       lato: ["Lato", "sans-serif"],
       roboto: ["Roboto", "sans-serif"],
+      send: ["Send Flowers", "cursive"],
     },
   },
   plugins: [],
