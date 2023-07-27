@@ -19,7 +19,7 @@
 }
 
 .button-login {
-    @apply bg-slate-900 text-white px-[10px] py-[6px] rounded-[5px] font-[500] text-[.8rem] mx-auto block !font-lato
+    @apply px-[10px] py-[6px] rounded-[5px] text-[.8rem] mx-auto block
 }
 
 .p-panduan {
