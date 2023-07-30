@@ -3,7 +3,6 @@ import { Navigate, useNavigate } from "react-router-dom";
 import sman24 from "../assets/sman24.svg";
 
 const NavBar = (props) => {
-  console.log(props);
   const { route, display } = props;
 
   const navigate = useNavigate();

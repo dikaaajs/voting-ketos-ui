@@ -11,5 +11,5 @@ export default {
       courier: ["Courier Prime", "monospace"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
