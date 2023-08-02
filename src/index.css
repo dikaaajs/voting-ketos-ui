@@ -23,7 +23,7 @@ p {
 }
 
 .button-login {
-    @apply px-[15px] py-[6px] rounded-[5px] text-[.8rem] mx-auto block text-black
+    @apply px-[20px] py-[6px] rounded-[5px] text-[.8rem] mx-auto block text-black
 }
 
 .p-panduan {
@@ -36,4 +36,8 @@ p {
 
 .active-nav-kandidat {
     @apply text-blue-500
+}
+
+.btn-ketos-active {
+    @apply border-blue-300 border-solid border-[3px] scale-125
 }
