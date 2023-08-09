@@ -1,11 +1,8 @@
 import React from "react";
-import Background from "../assets/background-login.png";
 import NavBar from "../components/NavBar";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setUserAuth } from "../redux/slice/authSlice";
-
-import wave from "../assets/wave.svg";
 
 const LoginAdmin = () => {
   const dispatch = useDispatch();

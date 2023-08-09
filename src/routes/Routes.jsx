@@ -1,4 +1,3 @@
-import LoginMurid from "../page/LoginMurid.jsx";
 import CoblosKetos from "../page/CoblosKetos.jsx";
 import ProtectCoblos from "./ProtectCoblos.jsx";
 import LoginAdmin from "../page/LoginAdmin.jsx";
@@ -21,10 +20,6 @@ const router = createBrowserRouter([
     path: "/app",
     element: <ProtectApp />,
     children: [
-      {
-        path: "murid",
-        element: <LoginMurid />,
-      },
       {
         path: "lobi",
         element: <LobiMurid />,

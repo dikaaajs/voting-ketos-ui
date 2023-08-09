@@ -9,3 +9,13 @@ Content-Type: application/json
 {
     "nis": 212210226
 }
+
+
+###
+PUT https://joyous-fashion-frog.cyclic.app/ketos/pilih/ 
+Content-Type: application/json
+
+{
+    "nis": 212210226,
+    "kandidat": 10
+}

@@ -1,6 +1,4 @@
 import "./App.css";
-import glassx from "./assets/Block_Cross_2D_1_0001.png";
-import glassTriangle from "./assets/Atom_Tetra_1_0002.png";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
 
