@@ -3,11 +3,11 @@ https://joyous-fashion-frog.cyclic.app/ketos/result
 ###
 
 ### cari user pake NIS 
-POST https://joyous-fashion-frog.cyclic.app/user/profile
+POST https://joyous-fashion-frog.cyclic.app/student/profile
 Content-Type: application/json
 
 {
-    "nis": 212210226
+    
 }
 
 

@@ -6,12 +6,11 @@ import axios from "axios";
 
 import { notification } from "antd";
 
-import headerKandidat from "../assets/headerKandidatv2.svg";
 import centang from "../assets/check-circle-svgrepo-com (1).svg";
-import kandidat1 from "../assets/kandidat 1.svg";
-import kandidat2 from "../assets/kandidat 2.svg";
-import kandidat3 from "../assets/kandidat 3.svg";
-import hiasanNis from "../assets/hiasanInputNis.png";
+import osis from "../assets/osisLogo.png";
+import sman24 from "../assets/sman24Logo.png";
+import mpk from "../assets/mpkLogo.png";
+import Kandidat from "../components/Kandidat";
 
 const LobiMurid = () => {
   const [nis, setNIS] = useState(undefined);
@@ -91,10 +90,15 @@ const LobiMurid = () => {
 
       <NavBar display="logout" route="" />
       {contextHolder}
-      <div className="py-[180px] pb-[0px] w-full bg-[#ECAA55]">
-        <div className="w-[60%] mx-auto">
+      <div className="pb-[0px] w-full bg-[#722340] relative">
+        <div className="absolute flex w-fit gap-3 bottom-3 right-3 opacity-90 items-center">
+          <img src={sman24} className="h-[35px]" />
+          <img src={osis} className="h-[40px]" />
+          <img src={mpk} className="h-[40px]" />
+        </div>
+        <div className="w-[80%] mx-auto">
           {nama !== null ? (
-            <>
+            <div className="relative py-[200px]">
               <h1
                 className={`font-poppins text-[3rem] md:text-[3rem] text-center md:leading-[55px] leading-[40px] duration-[2s] ease-out w-full mx-auto text-white`}
               >
@@ -103,15 +107,15 @@ const LobiMurid = () => {
               <p className="text-center text-white text-[.9rem]">
                 silahkan pilih kandidat sesuai pilihan yang anda suka
               </p>
-            </>
+            </div>
           ) : (
-            <div className="relative">
+            <div className="relative py-[200px]">
               <h1
-                className={`font-poppins text-white text-[2rem] md:text-[2rem] text-center md:leading-[40px] leading-[40px] duration-[2s] ease-out w-[60%] mx-auto`}
+                className={`font-poppins text-white !text-[4rem] md:text-[2rem] text-center md:leading-[40px] leading-[40px] duration-[2s] ease-out w-[60%] mx-auto`}
               >
                 Masukan nis siswa/i
               </h1>
-              <div className="w-full h-[35px] relative mt-[50px]">
+              <div className="w-[80%] mx-auto h-[35px] relative mt-[50px]">
                 <div
                   className=" absolute right-3 bottom-0 z-10 cursor-pointer"
                   onClick={handleClick}
@@ -120,9 +124,8 @@ const LobiMurid = () => {
                     arrow_forward
                   </span>
                 </div>
-
                 <input
-                  type="text"
+                  type="number"
                   className="border-solid border-white border-[1px] rounded-[4px] w-full h-[35px] font-courier pl-[5px] focus:border-blue-100 focus:border-[1px]"
                   placeholder="masukan ..."
                   onChange={(e) => {
@@ -133,24 +136,9 @@ const LobiMurid = () => {
             </div>
           )}
         </div>
-        <img src={hiasanNis} className="w-full" alt="" />
       </div>
 
-      <div className="w-full pb-[200px]">
-        <div className="w-full relative">
-          <img
-            src={headerKandidat}
-            className="mx-auto scale-50 py-[90px]"
-            alt=""
-          />
-
-          <div className="flex gap-[10px] justify-center flex-wrap">
-            <img src={kandidat1} className="scale-75" alt="" />
-            <img src={kandidat2} className="scale-75" alt="" />
-            <img src={kandidat3} className="scale-75" alt="" />
-          </div>
-        </div>
-      </div>
+      <Kandidat />
 
       {/* pilih kandidat section */}
       {nis !== undefined && (

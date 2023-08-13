@@ -7,19 +7,19 @@ p {
 }
 
 .card-login {
-    @apply bg-white w-[85%] lg:w-[40%] mx-auto rounded-[9px] py-[20px] font-poppins text-slate-800
+    @apply bg-white w-[85%] lg:w-[40%] mx-auto rounded-[9px] py-[40px] font-poppins text-slate-800
 }
 
 .card-login h1 {
-    @apply text-[1.5rem] text-center
+    @apply text-[2rem] text-center
 }
 
 .card-login label {
-    @apply text-[.9rem]
+    @apply text-[.9rem] font-courier
 }
 
 .login-input {
-    @apply bg-white opacity-60 border-[2px] border-solid w-full rounded-[5px] text-black font-lato px-[15px]
+    @apply bg-white opacity-75 border-[1px] border-solid w-full rounded-[5px] text-black px-[15px] font-courier
 }
 
 .button-login {

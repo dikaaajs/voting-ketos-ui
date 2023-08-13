@@ -6,20 +6,19 @@ import { useState } from "react";
 import manusia1 from "./assets/manusia1.svg";
 import manusia2 from "./assets/s 1.svg";
 import wave from "./assets/wave.svg";
-import muridMemilih from "./assets/murid-memilih.svg";
+import muridMemilih from "./assets/murid memilih.svg";
 import loginAdmin from "./assets/login-admin.svg";
-import loginMurid from "./assets/login-murid.svg";
+import loginMurid from "./assets/login murid.svg";
 import manusiaPanduan from "./assets/manusiaPanduan.png";
 import lambangKerajaan from "./assets/lambangKerajaan.svg";
 import bintang from "./assets/bintang.svg";
 
 // component
-import CandidateCard from "./components/CandidateCard";
 import FooterHomepage from "./components/Footer";
 
 // data
-import { candidate } from "./data/candidateData";
 import NavBar from "./components/NavBar";
+import Kandidat from "./components/Kandidat";
 
 function App() {
   const [fadeIn, setFadeIn] = useState(false);
@@ -62,13 +61,13 @@ function App() {
 
       {/* jumbotron section */}
       <div
-        className={`py-[200px] flex flex-col duration-[2s] ease-out jumbotron bg-[#ECAA55] relative w-full h-fit`}
+        className={`py-[200px] flex flex-col duration-[2s] ease-out jumbotron bg-[#722340] relative w-full h-fit`}
       >
         <img
           ref={triangle}
           src={manusia1}
           alt=""
-          className={`absolute bottom-[20px] left-[90px] duration-[1s] ease-out z-[10] w-[200px] ${
+          className={`absolute scale-125 bottom-[50px] left-[90px] duration-[1s] ease-out z-[10] w-[200px] ${
             viewTriangle ? "opacity-100" : " opacity-0"
           }`}
         />
@@ -76,7 +75,7 @@ function App() {
           ref={x}
           src={manusia2}
           alt=""
-          className={`w-[230px] absolute bottom-[10px] right-[90px] z-[10] duration-[1s] ease-out ${
+          className={`w-[230px] scale-125 absolute bottom-[40px] right-[90px] z-[10] duration-[1s] ease-out ${
             viewX ? " opacity-100" : " opacity-0"
           }`}
         />
@@ -90,7 +89,7 @@ function App() {
         <img
           src={lambangKerajaan}
           alt=""
-          className={`absolute left-[46%] bottom-[50px] duration-[1s] ease-out z-[10] ${
+          className={`absolute left-[46%] bottom-[120px] duration-[1s] ease-out z-[10] ${
             viewX ? " opacity-100" : " opacity-0"
           }`}
         />
@@ -117,16 +116,13 @@ function App() {
               viewParaJumbotron ? "opacity-100 translate-x-0" : "opacity-0"
             }`}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            luctus nec enim at congue. Phasellus lacinia venenatis ipsum eu
-            rhoncus. Aliquam viverra, justo ac dignissim pellentesque, mauris mi
-            molestie
+            Ready for change, ready to lead
           </p>
         </div>
       </div>
 
       {/* panduan section */}
-      <div className="py-[40px] bg-[#202020] relative">
+      <div className="py-[70px] bg-[#202020] relative">
         <img
           src={manusiaPanduan}
           alt=""
@@ -140,7 +136,7 @@ function App() {
           }`}
         >
           <h1
-            className={`font-poppins text-[2.5rem] text-center md:leading-[60px] leading-[40px] !text-white`}
+            className={`font-poppins text-[5rem] text-center md:leading-[60px] leading-[40px] !text-white`}
           >
             Panduan
           </h1>
@@ -155,23 +151,7 @@ function App() {
       </div>
 
       {/* kandidat section */}
-      <div className="text-black py-[30px]">
-        <div>
-          <h1 className="font-poppins text-[2rem] text-center md:leading-[60px] leading-[40px]">
-            Kandidat
-          </h1>
-          <p className="text-center">
-            berikut adalah beberapa kandidat pemilihan osis SMAN 24 bandung 2023
-          </p>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-[40px] w-[85%] mx-auto py-[90px]">
-          {/* kandidat 1 */}
-          {candidate.map((e, index) => {
-            return <CandidateCard key={index} data={e} />;
-          })}
-        </div>
-      </div>
+      <Kandidat />
 
       {/* footer */}
       <FooterHomepage />

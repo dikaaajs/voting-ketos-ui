@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      poppins: ["Poppins", "sans-serif"],
+      poppins: ["Rozha One", "serif"],
       lato: ["Lato", "sans-serif"],
       roboto: ["Roboto", "sans-serif"],
       send: ["Send Flowers", "cursive"],

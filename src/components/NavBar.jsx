@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigate, useNavigate } from "react-router-dom";
-import sman24 from "../assets/sman24.svg";
+import pemiraLogo from "../assets/pemira.png";
 
 const NavBar = (props) => {
   const { route, display } = props;
@@ -11,20 +11,16 @@ const NavBar = (props) => {
   };
 
   return (
-    <div className="border-b-[1px] border-[#F6E8D2] border-solid border-opacity-80 bg-[#fcfcfc] h-[80px] py-[15px] px-[30px] flex items-center justify-between drop-shadow-md">
-      <div className="logo h-full">
-        <img src={sman24} alt="logo osis" className="h-full" />
-      </div>
-      <div className="flex gap-[10px] cursor-pointer">
-        <div>
-          <h1 className="button-login font-send text-black !text-[1rem]">
-            contact us
-          </h1>
-        </div>
-        <div onClick={handleLoginButton} className="cursor-pointer">
-          <h1 className="button-login !bg-[#ECAA55] font-send !text-[1rem] border-[#362313] border-[1px] border-solid">
+    <div className="bg-[#F6D2D2] h-[80px] py-[15px] px-[30px] flex items-center justify-between drop-shadow-md">
+      <img src={pemiraLogo} alt="logo osis" className="h-[60%] block mr-auto" />
+      <div className="cursor-pointer">
+        <div
+          onClick={handleLoginButton}
+          className="cursor-pointer py-[12px] px-[25px] bg-[#722340] rounded-[5px]"
+        >
+          <p className="font-courier text-[.8rem] flex items-center h-fit text-white">
             {display}
-          </h1>
+          </p>
         </div>
       </div>
     </div>
